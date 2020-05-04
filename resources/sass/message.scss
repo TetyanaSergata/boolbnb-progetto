@@ -1,0 +1,82 @@
+.main-container{
+  width: 70%;
+  margin: 0 auto;
+  font-size: 15px;
+    // Header
+  .divider-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    hr{
+      width: 30%;
+      border-top: 2px solid lightgrey;
+    }
+    .head-title{
+      text-align: center;
+      margin: 30px 10px 50px 10px;
+      border: 2px solid lightgrey;
+      border-radius: 25px;
+      box-shadow: 8px 9px 16px -6px rgba(0,0,0,0.50);
+      h1{
+        margin: 13px;
+        font-size: 30px;
+      }
+    }
+  }
+  // Il box dei messaggi
+  .messages-box{
+    height: calc(100vh - (145.426px + 200px));
+    overflow-y: scroll;
+    ul{
+      list-style: none;
+      padding-left: 0;
+      li .message{
+        margin-bottom: 50px;
+        padding: 15px;
+        border-left: 2px solid lightgrey;
+        border-bottom: 2px solid lightgrey;
+        border-radius: 10px;
+        background-color: white;
+        .content-visible{
+          h4{
+            font-weight: bold
+          }
+          .line-email span{
+            text-decoration: underline;
+          }
+          // Box nascosto
+          .hidden-box {
+            display:none;
+            .message-text{
+              line-height: 30px;
+              margin: 10px 0 20px 0;
+            }
+          }
+          // Bottone Mostra meno
+          .button-hide{
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+// MEDIA QUERY
+@media screen and (max-width: 1024px) {
+  .main-container .divider-box .head-title {
+    margin: 20px 7px 30px 7px;
+    h1 {
+      font-size: 27px;
+      margin: 7px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .messages-box ul{
+    padding-left: 0;
+  }
+  .main-container{
+    width: 80%;
+    }
+}

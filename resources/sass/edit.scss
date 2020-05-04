@@ -1,0 +1,132 @@
+// general
+
+.form-box{
+    display: flex;
+    flex-direction: column;
+    label{
+        text-align: center;
+    }
+    input{
+        border: 1px solid $mainColor;
+        border-radius: 5px;
+        text-align: center;
+    }
+    input.number{
+        width: 50%;
+        margin: auto;
+    }
+}
+#s-extra{
+    margin-top: 10px;
+}
+.cont-create{
+    border: 3px solid $mainColor;
+    text-align: center;
+    padding: 20px;
+    h2{
+        color: $mainColor;
+        margin-bottom: 30px;
+    }
+    .map-button{
+        margin-top: 20px;
+    }
+    #map-map{
+        width:100%;
+        height:250px;
+        #map{
+            width: 100%;
+            height:250px;
+        }
+    }
+
+    input[type="file"] {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0,0,0,0);
+        border: 0;
+    }
+    .cover-custom {
+        padding: 0 10px;
+        margin-top: 20px;
+        max-width: 200px;
+        height: 45px;
+        line-height: 45px;
+        border-radius: 10px;
+        color: white;
+        transition: 0.6s;
+        border: 1px solid lightgrey;
+        background-color: $mainColor;
+        background-size: 200% auto;
+        font-size: 12px;
+        &:hover{
+          color: white;
+          border: 1px solid lightgrey;
+          background-color: $secondaryColor;
+          background-position: right center;
+          background-image: linear-gradient(to right, $mainColor 0%, $secondaryColor 51%, $mainColor 100%);
+        }
+    }
+
+    
+}
+.container.cont-create.bottom-container{
+    .hide-flat{
+
+        text-align: center;
+        padding: 10px;
+        margin-bottom: 50px;
+        p{
+            margin-bottom: 30px;
+        }
+        .radius-container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-top: 50px;
+            padding-left: 25px;
+            font-size: 20px;
+            .radius {
+                width: calc(50% - 10px);
+            }
+        }  
+    }
+    .extra-service-container{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+        padding: 20px;
+        text-align: center;
+        .extra_services_box{
+            
+            line-height: 30px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            width: calc(100% / 3 - 10px);
+            span{
+                text-align: center;
+                i{
+                    color: $mainColor;
+                    margin-right: 5px;
+                }
+            }
+            span.checkbox{
+                margin-left: 10px;
+            }
+        }
+    }
+}
+.submit-box{
+    text-align: center;
+    #submit{
+        margin-bottom: 30px;
+        background-color: $mainColor;
+    }
+}
+    

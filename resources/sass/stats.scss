@@ -1,0 +1,34 @@
+.stats {
+	h1 {
+		text-align: center;
+	}
+	.box-stats {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		.info {
+			text-align: center;
+			h4 {
+				background: -webkit-linear-gradient(rgb(146, 23, 77), rgb(228, 29, 92) );
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+			}
+		}
+		.visits, .messages {
+			width: calc((100% / 2) - 40px);
+			margin: 20px;
+		}
+	}
+}
+
+@media screen and (max-width: 992px) {
+	.stats {
+		.box-stats {
+			display: block;
+			.visits, .messages {
+				width: 90vw;
+				margin: 40px auto;
+			}
+		}
+	}
+}

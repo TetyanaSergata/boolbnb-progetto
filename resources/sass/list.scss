@@ -1,0 +1,112 @@
+.welcome{
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  a{
+    .info-btn{
+      font-size: 16px;
+    }
+  }
+}
+
+.list-flat{
+  padding: 0;
+  ul{
+    list-style: none;
+    padding: 0;
+    .flat-box{
+      display: flex;
+      align-items: center;
+      border: 1px solid lightgrey;
+      border-radius: 10px;
+      box-shadow: 6px 7px 10px -4px rgba(0,0,0,0.60);
+      &:hover{
+        box-shadow: 8px 9px 16px -6px rgba(0,0,0,0.80);
+      }
+        .box-image{
+          flex-basis: 30%;
+          margin-right: 15px;
+          padding: 5px;
+          img{
+            width: 100%;
+            border-radius: 10px;
+          }
+        }
+      .box-info{
+        flex-basis: 55%;
+        margin-right: 50px;
+        padding: 5px;
+        a{
+          color: black;
+          &:hover{
+            text-decoration: none;
+            color: rgb(99, 92, 95);
+          }
+        }
+        .bold{
+          font-weight: bold;
+        }
+      }
+      .box-button{
+        flex-basis: 15%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 10px;
+        .info-btn{
+          width: 100px;
+        }
+          .btn-danger{
+            line-height: 30px;
+            transition: 0.6s;
+            border-radius: 10px;
+            background-color: rgb(219, 10, 10);
+            background-size: 200% auto;
+            width: 100px;
+            &:hover{
+              color: rgb(250, 255, 0);
+              background-position: right center;
+              background-image: linear-gradient(to right, rgb(255, 0, 0) 0%, #b31217 51%, rgb(255, 0, 0) 100%);
+            }
+          }
+        }
+      }
+    }
+  }
+
+// MEDIA QUERY
+@media screen and (max-width: 1024px) {
+  .list-flat ul {
+    .flat-box{
+      margin: 20px;
+      .box-image {
+        width: 40%;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .list-flat ul .flat-box{
+    display: block;
+    text-align: center;
+    .box-image{
+      width: 75%;
+      margin: 0 auto;
+      padding: 15px;
+    }
+    .box-info{
+      margin: 10px auto;
+    }
+    .box-button{
+      flex-direction: row;
+      justify-content: space-around;
+      margin: auto;
+      max-width: 500px;
+    }
+  }
+  .box-image img{
+    text-align: center;
+  }
+}
